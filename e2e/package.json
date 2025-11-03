@@ -5,6 +5,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "install": "yarn --cwd vite3"
+    "install": "pnpm --dir vite3 install && pnpm --dir vite4 install"
   }
 }

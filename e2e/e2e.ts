@@ -18,7 +18,10 @@ import { readFileSync, writeFileSync } from "fs";
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 type VitePackages = {
-  vite: typeof import("./vite3/node_modules/vite");
+  vite: {
+    build: (config: any) => Promise<any>;
+    createServer: (config: any) => Promise<any>;
+  };
 };
 
 async function buildAndStartProdServer(

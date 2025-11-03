@@ -13,7 +13,7 @@ and the typical `debug` and `release` build variants mapped to `vite dev` and `v
 Just install it as:
 
 ```bash
-yarn add -D vite-plugin-assemblyscript-asc
+pnpm add -D vite-plugin-assemblyscript-asc
 ```
 
 ## Vite integration usage

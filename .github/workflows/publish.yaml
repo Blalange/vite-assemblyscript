@@ -14,12 +14,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Test
-        run: yarn test
+        run: pnpm test
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
         with:
